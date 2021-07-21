@@ -9,7 +9,6 @@ class Person
         @bank_account = 25
         @happiness = 8
         @hygiene = 8
-        @amount
     end
    
     def happiness=(value)
@@ -48,13 +47,19 @@ class Person
         end
     end
 
-    def get_paid=(amount)
-        @amount = amount
+    def get_paid(amount)
+        self.bank_account += amount
+        "all about the benjamins"
+    end
+
+    def take_bath
+
+        @hygiene = @hygiene += 4
+        self.hygiene
+        "♪ Rub-a-dub just relaxing in the tub ♫"
     end
     
-    def get_paid
-        @amount
-    end
+    
     
 
 end
