@@ -58,10 +58,18 @@ class Person
     end
 
     def work_out
-        @happiness += 2
+        self.happiness= @happiness += 2
         self.hygiene= @hygiene -= 3
         "♪ another one bites the dust ♫"
     end
+
+    def call_friend(person)
+        self.happiness= @happiness += 3
+        person.happiness= @happiness += 3
+        "Hi #{person}! It's #{self.name}. How are you?"
+    end
+
+
 
 
 
